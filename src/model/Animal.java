@@ -19,13 +19,14 @@ public abstract class Animal {
     
     abstract public String printSound();
     
-    public String printData() {
-        String str = getClass().getSimpleName() + "\n";
-        str += "Name: " + name + "\n";
-        str += "Age: " + age + "\n";
-        str += "Food: " + food + "\n";
-        str += "Gender: " + gender + "\n";
-        str += "Alive: " + alive + "\n";
+    public StringBuilder printData() {
+        StringBuilder str = new StringBuilder();
+        str.append(getClass().getSimpleName()).append("\n");
+        str.append("Name: ").append(name).append("\n");
+        str.append("Age: ").append(age).append("\n");
+        str.append("Food: ").append(food).append("\n");
+        str.append("Gender: ").append(gender).append("\n");
+        str.append("Alive: ").append(alive).append("\n");
         return str;
     };
     
